@@ -2,11 +2,17 @@
 
 This project will help us better understand basic DOM manipulation by creating a paint program! Much like Microsoft Paint.
 
-Our index.html has 5400 divs on it. These divs are little black squares. These squares will each act as a pixel in our paint application. We shouldn't have to worry about our html or css in this project. Just our JavaScript file named app.js
+Our index.html has 5400 divs on it. These divs are little black squares. 
+These squares will each act as a pixel in our paint application. 
+We shouldn't have to worry about our html or css in this project. 
+Just our JavaScript file named app.js
 
 # Step 1 - Add Class
 
-The primary thing our 'pixes' do is change color. These little guys will be the building blocks of our works of art. With v1 of our app, let's go with just black and white pixels. Not because we can't have colors, but we'll need to save some features for v2 right?
+The primary thing our 'pixes' do is change color. 
+These little guys will be the building blocks of our works of art. 
+With v1 of our app, let's go with just black and white pixels. 
+Not because we can't have colors, but we'll need to save some features for v2 right?
 
 - Initialize our app.js file by loading the document when it's ready
 
@@ -34,7 +40,9 @@ Our style.css file has a class named white. All it does is change the background
 In theory this would change the black box we click on to a white box, but what happens when we try it out?
 It looks as though when we click on a box, all of our boxes are turning white!
 
-This is because they all share the same class, by the name of box. We are currently telling jQuery that anything with the class 'box' should also have the class 'white'. This is a common problem in jQuery. Now we could give each div in the list of all 5400 divs their own unique ID, but I've got a better idea. 
+This is because they all share the same class, by the name of box. 
+We are currently telling jQuery that anything with the class 'box' should also have the class 'white'. 
+This is a common problem in jQuery. Now we could give each div in the list of all 5400 divs their own unique ID, but I've got a better idea. 
 
 - Use the 'this' keyword
 
@@ -44,11 +52,17 @@ This is because they all share the same class, by the name of box. We are curren
   })
 ```
 
-The keyword 'this' is very common in JavaScript and it's also very confusing. In this case with our jQuery code it's referring to the specific box we clicked on. Often times you'll find yourself in positions where you need to change one thing, in an array of many. If you ever find yourself changing all of them, experiement with 'this' a bit. 
+The keyword 'this' is very common in JavaScript and it's also very confusing. 
+In this case with our jQuery code it's referring to the specific box we clicked on. 
+Often times you'll find yourself in positions where you need to change one thing, in an array of many. 
+If you ever find yourself changing all of them, experiement with 'this' a bit. 
 
 ## Step 2 - Edits
 
-Great, now we can create beautiful works of art. Black and white art, but art nonetheless. But what happens when we make a mistake? There is no way to edit our artwork. Let's fix that.
+Great, now we can create beautiful works of art. 
+Black and white art, but art nonetheless. 
+But what happens when we make a mistake? 
+There is no way to edit our artwork. Let's fix that.
 
 - Make it so that when we double click, it changes back to black with removeclass
 
@@ -64,7 +78,9 @@ Great, now we can create beautiful works of art. Black and white art, but art no
 
 ## Step 3 - Reset Button
 
-It looks like we have a reset button. Let's make it work. Remember how we could send blanket commands over all of our pixels by using the class name instead of the individual pixel? Let's use that method to create our reset button.
+It looks like we have a reset button. Let's make it work. 
+Remember how we could send blanket commands over all of our pixels by using the class name instead of the individual pixel? 
+Let's use that method to create our reset button.
 
 - Make the reset button work
 
@@ -127,7 +143,8 @@ Let's make our color buttons work!
 
 ```
 
-One last thing is a little messed up. Our reset and double click functions aren't working now. Because we placed the 'color' variable in the place of the remove class action, it will only respect the currently selected color. 
+One last thing is a little messed up. Our reset and double click functions aren't working now. 
+Because we placed the 'color' variable in the place of the remove class action, it will only respect the currently selected color. 
 
 In jQuery's removeClass function we have the ability to remove multiple classes by just separating each class we want to remove by a space, like so:
 
